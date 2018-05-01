@@ -54,12 +54,12 @@ public class Order {
         public Calculations invoke() {
             // Total up line items
             for (OrderLineItem lineItem : orderLineItemList) {
-                itemsTotal = itemsTotal.add(lineItem.getPrice());
+                this.itemsTotal = this.itemsTotal.add(lineItem.getPrice());
             }
 
             // Subtract discounts
             for (BigDecimal discount : discounts) {
-                this.discount = discount.add(discount);
+                this.discount = this.discount.add(discount);
             }
 
             return this;
